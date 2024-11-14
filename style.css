@@ -1,0 +1,253 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0a0c2a ;
+}
+/* Estilo do Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #0a0c2a;
+    height: 130px;
+    
+}
+
+.logo img {
+    font-size: 1.5em;
+    margin-left: 38px;
+}
+
+.social-icons a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 32px; 
+    gap: 20px;
+}
+
+#instagram {
+    color: #EF0DC9;
+    transform: scale(1.1);
+}
+
+#facebook {
+    color: #0463FE;
+    transform: scale(1.1);
+}
+
+#wpp {
+    color: #32D851;
+    transform: scale(1.1);
+}
+
+.social-icons {
+    margin-right: 38px;
+}
+
+.hero h2{
+    text-align: center;
+    padding: 30px 420px;
+    color: #fff;
+    font-size: 46px;
+}
+
+.warning-stripes {
+    width: 100%; /* Ajuste para ocupar toda a largura disponível */
+    max-width: 600px; /* Largura máxima para limitar o tamanho */
+    height: 20px;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    background: repeating-linear-gradient(
+        45deg, /* Ângulo das listras */
+        #ffcc00, /* Cor amarela */
+        #ffcc00 10px,
+        #0a0c2a 10px,
+        #0a0c2a 20px
+    );
+}
+
+@keyframes brushStroke {
+    0% {
+        clip-path: inset(0 100% 0 0); /* Começa oculto, com a animação se movendo da esquerda para a direita */
+    }
+    100% {
+        clip-path: inset(0 0 0 0); /* Revela todo o elemento */
+    }
+}
+
+.highlight {
+    margin-top: 20px;
+    padding: 40px 30px;
+    color: #FFFF;
+    font-weight: bold;
+    text-align: center;
+    background: url('https://www.onlygfx.com/wp-content/uploads/2017/04/grunge-brush-stroke-banner-2-17.png') no-repeat center;
+    background-size: cover;
+    border-radius: 5px;
+    filter: invert(96%) sepia(100%) saturate(5000%) hue-rotate(330deg) brightness(90%);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.3;
+    font-size: 32px;
+    clip-path: inset(0 100% 0 0); /* Inicialmente oculto */
+    animation: brushStroke 2s ease forwards; /* Animação de 2 segundos */
+}
+
+.highlight span {
+    color: #0a0c2a;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.form-container {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.form-text {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.arrow-icon {
+    font-size: 100px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 1s infinite;
+}
+
+/* Animação de "bounce" */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.signup-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.signup-form button {
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #0a0c2a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espaçamento maior para separar as imagens */
+    padding: 40px 20px;
+    background-color: #0a0c2a;
+}
+
+.product {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom ao passar o mouse */
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 50px 30px;
+    background-color: #0a0c2a;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    max-width: 300px;
+    text-align: left;
+}
+
+.benefit-item i {
+    font-size: 80px;
+    color: #32D851; /* Cor verde do ícone de check */
+}
+
+.benefit-item p {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0c2a;
+    color: #fff;
+}
+
+
